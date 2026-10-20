@@ -284,11 +284,63 @@ class TelaDashboard extends StatelessWidget {
             // ===================================================================
             // TODO [Desafio 3]: Implementar a seção "Últimos Registros" aqui
 
+              Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.teal.shade50,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Icon(
+                    Icons.list,
+                    color: Colors.teal,
+                  ),
+                  Text(
+                    'Últimos Registros',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward,
+                    color: Colors.teal,
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 24.0),
             // ===================================================================
             // 📍 DESAFIO 4 (1,5 ponto):
             // Demonstrar/comprovar a ocorrência e correção de um erro de overflow
             // (RenderFlex overflow) via prints ou bloco comentado.
             // ===================================================================
+            // Exemplo de erro de overflow:
+            // Row(
+            //   children: [
+            //     Icon(Icons.info),
+            //     Text('Este texto muito grande pode ultrapassar o limite da tela e causar um RenderFlex overflow quando não há espaço suficiente.'),
+            //   ],
+            // ),
+
+            // Correção do overflow usando Expanded:
+            Row(
+              children: const [
+                Icon(
+                  Icons.info,
+                  color: Colors.teal,
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Erro de overflow corrigido utilizando Expanded.',
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
