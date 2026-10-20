@@ -58,7 +58,7 @@ class TelaDashboard extends StatelessWidget {
             // Desafio 1: Adicionar o 3º Card (Icons.camera_alt, '45', 'Fotos') com Expanded.
             // Desafio 8: Refatorar esta seção usando GridView.count (grade 2x2).
             // ===================================================================
-            Row(
+              Row(
               children: [
                 Expanded(
                   child: Container(
@@ -67,17 +67,34 @@ class TelaDashboard extends StatelessWidget {
                       color: Colors.teal.shade100,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Column(
-                      children: const [
-                        Icon(Icons.flutter_dash, size: 36, color: Colors.teal),
+                    child: const Column(
+                      children: [
+                        Icon(
+                          Icons.flutter_dash,
+                          size: 36,
+                          color: Colors.teal,
+                        ),
                         SizedBox(height: 8),
-                        Text('124', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                        Text('Aves Vistas', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                        Text( '124',
+                            style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text('Aves Vistas',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ],
                     ),
                   ),
                 ),
+
                 const SizedBox(width: 12.0),
+
                 Expanded(
                   child: Container(
                     padding: const EdgeInsets.all(16.0),
@@ -85,27 +102,73 @@ class TelaDashboard extends StatelessWidget {
                       color: Colors.teal.shade50,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Column(
-                      children: const [
-                        Icon(Icons.place, size: 36, color: Colors.teal),
+                    child: const Column(
+                      children: [
+                        Icon(
+                          Icons.place,
+                          size: 36,
+                          color: Colors.teal,
+                        ),
                         SizedBox(height: 8),
-                        Text('18', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                        Text('Locais Visitados', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                        Text('18',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text('Locais Visitados',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ],
                     ),
                   ),
                 ),
+
                 const SizedBox(width: 12.0),
-                // TODO [Desafio 1]: Adicionar aqui o terceiro Card com Expanded (Ícone: Icons.camera_alt, '45', 'Fotos')
+
+                // TODO [Desafio 1]: Adicionar aqui o terceiro Card com Expanded (Icone: Icons.camera_alt, '45', 'Fotos')
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(16.0),
+                    decoration: BoxDecoration(
+                      color: Colors.teal.shade100,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Column(
+                      children: [
+                        Icon(
+                          Icons.camera_alt,
+                          size: 36,
+                          color: Colors.teal,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          '45',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Fotos',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
-            const SizedBox(height: 24.0),
 
-            const Text(
-              'Destaque da Semana',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
             const SizedBox(height: 16.0),
+          
 
             // ===================================================================
             // 📍 DESAFIO 5 (2,0 pontos) & DESAFIO 6 (1,5 ponto):
